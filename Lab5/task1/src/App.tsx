@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import UserCard from "./components/UserCard";
+import SkillList from "./components/SkillList";
+import { Skill, User } from "./types";
 
 function App() {
-  const [count, setCount] = useState(0)
+    const user: User = {
+        name: "Alex",
+        email: "alex@mail.com",
+        age: 24,
+    };
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    const skills: Skill[] = [
+        { id: 1, name: "React", level: "Intermediate" },
+        { id: 2, name: "TypeScript", level: "Beginner" },
+        { id: 3, name: "Node.js", level: "Expert" },
+    ];
+
+    return (
+        <UserCard user={user} isActive={true}>
+            <p>Bio: Frontend developer</p>
+            <SkillList skills={skills} />
+        </UserCard>
+    );
 }
 
-export default App
+export default App;
