@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+}
+
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #0057cc;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #003f99;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.card {
+  background: white;
+  margin-bottom: 16px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.filterInput {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.listItem {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  background: white;
+}
+
+.listItem h4 {
+  margin: 0 0 6px;
+}
+
+.listItem p {
+  margin: 0 0 6px;
+}
+
+.category {
+  display: inline-block;
+  padding: 4px 8px;
+  background: #e9f1ff;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.regularList {
+  max-height: 500px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+}
